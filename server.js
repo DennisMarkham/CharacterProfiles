@@ -18,10 +18,14 @@ app.listen(PORT, function() {
 
 var characters = [
 {
-name: "Mordecia"  
+name: "Mordecia",
+style: "body {background-color: blue;}"
 }, 
-{name: "Rigby"},
-{name: "Benson"}
+{name: "Rigby",
+style: "body {background-color: brown;}"
+},
+{name: "Benson",
+style: "body {background-color: red;}"}
 ];
 
 app.get("/:characters?", function(req, res) {
@@ -34,7 +38,8 @@ app.get("/:characters?", function(req, res) {
 
     for (var i = 0; i < characters.length; i++) {
       if (chosen.toLowerCase() === characters[i].name.toLowerCase()) {
-         var html = "<h1>" + characters[i].name + "</h1>";
+         var html = "<head> <style>" + characters[i].style + "</style> </head> <body>"
+         html += "<h1>" + characters[i].name + "</h1></body>";
         return res.send(html);
       }
     }
