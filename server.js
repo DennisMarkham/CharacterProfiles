@@ -45,7 +45,8 @@ app.get("/", function(req, res){
 
   for (var i = 0; i < characters.length; i++)
   {
-    list += characters[i].name + "<br>";
+    list += "<a href = 'localhost:3000/" + characters[i].name.toLowerCase + "'>" + 
+    characters[i].name + "</a><br>";
   }
 
   return res.send(list);
