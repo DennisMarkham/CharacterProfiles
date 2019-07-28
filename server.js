@@ -35,9 +35,22 @@ species: "raccoon"
 },
 {name: "Benson",
 style: "body {background-color: red;}",
-species: "gumball machine"
+species: "gumball machine" 
 }
 ];
+
+app.get("/", function(req, res){
+
+  var list = "";
+
+  for (var i = 0; i < characters.length; i++)
+  {
+    list += characters[i].name + "<br>";
+  }
+
+  return res.send(list);
+})
+
 
 app.get("/:characters?", function(req, res) {
   var chosen = req.params.characters;
