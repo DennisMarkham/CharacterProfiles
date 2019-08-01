@@ -27,15 +27,18 @@ var characters = [
 {
 name: "Mordecia",
 style: "body {background-color: blue;}",
-species: "bluejay"
+species: "bluejay",
+image:"https://vignette.wikia.nocookie.net/fictionalfighters/images/d/d6/Mordecai-1.png/revision/latest?cb=20150524181704"
 }, 
 {name: "Rigby",
 style: "body {background-color: brown;}",
-species: "raccoon"
+species: "raccoon",
+image:"https://vignette.wikia.nocookie.net/theregularshow/images/d/dd/Rigby.png/revision/latest?cb=20190612191840"
 },
 {name: "Benson",
 style: "body {background-color: red;}",
-species: "gumball machine" 
+species: "gumball machine",
+image:"https://vignette.wikia.nocookie.net/theregularshow/images/c/c2/Benson_character.png/revision/latest?cb=20190612191922"
 }
 ];
 
