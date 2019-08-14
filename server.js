@@ -44,15 +44,7 @@ image:"https://vignette.wikia.nocookie.net/theregularshow/images/c/c2/Benson_cha
 
 app.get("/", function(req, res){
 
-  var list = "";
-
-  for (var i = 0; i < characters.length; i++)
-  {
-    list += "<a href = 'localhost:3000/" + characters[i].name.toLowerCase + "'>" + 
-    characters[i].name + "</a><br>";
-  }
-
-  return res.send(list);
+  res.render("all", { all: characters });
 })
 
 
